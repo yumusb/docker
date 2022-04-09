@@ -5,6 +5,7 @@ WORKDIR /root
 ARG TARGETPLATFORM
 ARG TAG
 COPY v2ray.sh /root/v2ray.sh
+COPY config.json /etc/v2ray/config.json
 
 RUN set -ex \
 	&& apk add --no-cache tzdata openssl ca-certificates \
