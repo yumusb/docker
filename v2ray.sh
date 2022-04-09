@@ -60,8 +60,8 @@ mv v2ray v2ctl /usr/bin/
 mv geosite.dat geoip.dat /usr/local/share/v2ray/
 uid=$(uuidgen)
 echo $uid
-sed -i -r "s/[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/$uid/" config.json
-mv config.json /etc/v2ray/config.json
+sed -i -r "s/[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/$uid/" /etc/v2ray/config.json
+#mv config.json /etc/v2ray/config.json
 
 # Clean
 rm -rf ${PWD}/*
